@@ -26,10 +26,25 @@ public class Programs {
 			System.out.println("is a prime");
 		}
 	}
+	public void checkPrimeRange(int count) {
+		int max=count;
+		if(max<=1) {
+			System.out.println("Prime numbers are"+max);
+		}else {
+		for(int i=2;i<=max;i++) {
+			 {
+				 if(!(i%2==0))
+					System.out.print(i);
+				}
+			}
+		}
+		}
+	
 		public static void main(String[] args) {
 			Programs pg=new Programs();
 			pg.fiboSeries(10);
 			pg.checkPrime(6);
+			pg.checkPrimeRange(10);
 	}
 
 }
