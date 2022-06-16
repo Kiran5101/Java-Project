@@ -34,17 +34,34 @@ public class Programs {
 		for(int i=2;i<=max;i++) {
 			 {
 				 if(!(i%2==0))
-					System.out.print(i);
+					System.out.print(i+" ");
 				}
 			}
 		}
 		}
+	public void isArmstrong(int num) {
+		int Temp=num;
+		int Sum=0,LastDigit=0,number,Power; 
+		while(Temp !=0) {
+			LastDigit=Temp%10;
+			Power=(int) Math.pow(LastDigit, 3);
+			Sum+=Power;
+			Temp/=10;
+		}
+		if(Sum==num) {
+			System.out.println("Given Number is a armstrong number");
+		}
+		else {
+			System.out.println("Given Number is NOT armstrong number");
+		}
+	}
 	
 		public static void main(String[] args) {
 			Programs pg=new Programs();
-			pg.fiboSeries(10);
-			pg.checkPrime(6);
-			pg.checkPrimeRange(10);
+			//pg.fiboSeries(10);
+			//pg.checkPrime(6);
+			//pg.checkPrimeRange(10);
+			pg.isArmstrong(1);
 	}
 
 }
